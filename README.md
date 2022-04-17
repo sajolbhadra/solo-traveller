@@ -3,9 +3,11 @@
 
 ## `Features Of this Site`
 * User can show different travel destination
-* User can sign in and sign out
 * user can choose destinations for their own
-.asldj
+* User can sign in and sign out
+* There are several authentication system including google and facebook sign in option
+* There is a checkout page to choose any tour plan
+
 
 ## `Used Technologies in this project`
 * React
