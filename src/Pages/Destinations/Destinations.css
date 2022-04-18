@@ -1,0 +1,19 @@
+.location-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    /* padding: 15px 15px 15px 15px; */
+    padding-left: 10px ;
+    gap: 10px;
+}
+
+@media screen and (max-width: 768px) {
+    .location-container{
+        display: flex;
+        flex-wrap: wrap;
+    }
+}
+@media screen and (max-width: 1100px) {
+    .location-container{
+        grid-template-columns: 1fr 1fr;
+    }
+}

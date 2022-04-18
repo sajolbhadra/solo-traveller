@@ -1,20 +1,25 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import useDestinations from '../../hooks/useDestinations';
+import Location from '../Location/Location';
+import './Destinations.css'
 
 const Destinations = () => {
-    const [destinations, setDestinations] = useState([]);
-    useEffect
-    ( ()=> {
-        fetch('data.json')
-        .then(res => res.json())
-        .then(data => setDestinations(data))
-    
-        console.log(destinations)
-    }, []);
-    console.log(destinations)
+    const [destinations, setDestinations] = useDestinations([]);
+
+    console.log(destinations);
+
+    const handleButton = () => {
+        console.log('button clicked');
+    }
     return (
-        <div>
-            <h4>Destinations</h4>
+        <div className='location-container'>
+            {
+                destinations.map(location => <Location
+                key={location.id}
+                location={location}
+                handleButton={handleButton}
+                ></Location>)
+            }
         </div>
     );
 };
