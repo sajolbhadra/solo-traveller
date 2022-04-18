@@ -8,8 +8,8 @@ const Location = (props) => {
         <div className='item mx-auto mt-4'>
             <img src={img} alt="" className='img-fluid'/>
             <div className='item-info'>
-                <h3>Item: {name}</h3>
-                <p>Price: {price}</p>
+                <h3>{name}</h3>
+                <p>Cost: {price}</p>
                 <p>{description}</p>
             </div>
                 <button onClick={() => handleButton(props.item)} className='btn-cart'>

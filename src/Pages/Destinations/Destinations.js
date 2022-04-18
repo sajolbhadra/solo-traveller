@@ -6,8 +6,6 @@ import './Destinations.css'
 const Destinations = () => {
     const [destinations, setDestinations] = useDestinations([]);
 
-    console.log(destinations);
-
     const handleButton = () => {
         console.log('button clicked');
     }

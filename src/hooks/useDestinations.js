@@ -8,7 +8,7 @@ const useDestinations = () => {
         .then(res => res.json())
         .then(data => setDestinations(data))
     
-        // console.log(destinations)
+        
     }, []);
     return [destinations, setDestinations];
     

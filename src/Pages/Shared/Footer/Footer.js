@@ -28,7 +28,7 @@ const Footer = () => {
                         </div>
                    </div>
                </div>
-               <h6 style={{color:'white', marginTop:'35px'}} className="text-center"> All © copyright reserved 2020-2021</h6>
+               <h6 style={{color:'white', marginTop:'35px'}} className="text-center"> All © copyright reserved 2022-2023</h6>
            </footer>
         </div>
     );

@@ -1,5 +1,5 @@
-# `Website Name`: Moina Tours and Travel
-# `Live Site` [Service Provider](https://service-provider7.web.app/) 
+# `Website Name`: Solo Traveller
+# `Live Site` [Solo Traveller](https://service-provider7.web.app/) 
 
 ## `Features Of this Site`
 * User can show different travel destination

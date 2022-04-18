@@ -5,7 +5,8 @@
     border:  2px solid #e6e6e6;
     border-radius: 20px;
     position: relative;
-    min-height: 700px;
+    height: 550px;
+    overflow-y: hidden;
 }
 .item img{
     height: 250px;

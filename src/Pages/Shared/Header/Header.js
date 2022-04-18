@@ -1,8 +1,10 @@
 import React from 'react';
-import { Container, Nav, Navbar } from 'react-bootstrap';
+import { Button, Container, Nav, Navbar } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
+import useFirebase from '../../../hooks/useFirebase';
 
 const Header = () => {
+    const { user, logOut } = useFirebase();
     return (
         <>
             <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
@@ -13,31 +15,28 @@ const Header = () => {
                         <Nav className="me-auto">
                             <Nav.Link as={Link} to="/home">Home</Nav.Link>
                             <Nav.Link as={Link} to="/destinations">Destinations</Nav.Link>
+                            <Nav.Link as={Link} to="/checkout">CheckOut</Nav.Link>
                             <Nav.Link as={Link} to="/Blog">Blog</Nav.Link>
                             <Nav.Link as={Link} to="/about-us">About US</Nav.Link>
                             <Nav.Link as={Link} to="/contact-us">Contact US</Nav.Link>
                         </Nav>
+                        {
+                            user && <img src={user.photoURL} alt="user" className='rounded-circle ' ></img>
+
+                        }
                         <Nav>
-                            <Nav.Link href="#deets">Sign In</Nav.Link>
-                            <Nav.Link eventKey={2} href="#memes">
-                                Sign out
-                            </Nav.Link>
+                            <span className='text-white d-flex align-items-center px-3'>{user.displayName && user.displayName}</span>
+                            {
+                                user?.uid
+                                    ?
+                                    <Button onClick={logOut}>Sign out</Button>
+                                    :
+                                    <Nav.Link as={Link} to="/login">Sign In</Nav.Link>
+                            }
                         </Nav>
                     </Navbar.Collapse>
                 </Container>
             </Navbar>
-            {/* <Navbar bg="dark" variant="dark">
-                <Container className='d-flex justify-content-around'>
-                    <Navbar.Brand href="#home">Solo Traveler</Navbar.Brand>
-                    <Nav className="">
-                        <Nav.Link href="#home"><Link className='text-white text-decoration-none' to='/home'>Home</Link></Nav.Link>
-                        <Nav.Link href="#destinations"><Link className='text-white text-decoration-none' to='/destinations'>Destinations</Link></Nav.Link>
-                        <Nav.Link href="#Blog"><Link className='text-white text-decoration-none' to='/blog'>Blog</Link></Nav.Link>
-                        <Nav.Link href="#About"><Link className='text-white text-decoration-none' to='/about-us'>About US</Link></Nav.Link>
-                        <Nav.Link href="#Contact"><Link className='text-white text-decoration-none' to='/contact-us'>Contact US</Link></Nav.Link>
-                    </Nav>
-                </Container>
-            </Navbar> */}
         </>
     );
 };
