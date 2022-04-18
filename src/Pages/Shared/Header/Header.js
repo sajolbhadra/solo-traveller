@@ -7,15 +7,15 @@ const Header = () => {
         <>
             <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
                 <Container className='d-flex justify-content-around'>
-                    <Navbar.Brand href="#home">Solo Traveler</Navbar.Brand>
+                    <Navbar.Brand as={Link} to="/">Solo Traveler</Navbar.Brand>
                     <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                     <Navbar.Collapse id="responsive-navbar-nav">
                         <Nav className="me-auto">
-                            <Nav.Link as={Link} to="/home"><Link className='text-white text-decoration-none' to='/home'>Home</Link></Nav.Link>
-                            <Nav.Link as={Link} to="/destinations"><Link className='text-white text-decoration-none' to='/destinations'>Destinations</Link></Nav.Link>
-                            <Nav.Link as={Link} to="/Blog"><Link className='text-white text-decoration-none' to='/blog'>Blog</Link></Nav.Link>
-                            <Nav.Link as={Link} to="/About"><Link className='text-white text-decoration-none' to='/about-us'>About US</Link></Nav.Link>
-                            <Nav.Link as={Link} to="/Contact"><Link className='text-white text-decoration-none' to='/contact-us'>Contact US</Link></Nav.Link>
+                            <Nav.Link as={Link} to="/home">Home</Nav.Link>
+                            <Nav.Link as={Link} to="/destinations">Destinations</Nav.Link>
+                            <Nav.Link as={Link} to="/Blog">Blog</Nav.Link>
+                            <Nav.Link as={Link} to="/about-us">About US</Nav.Link>
+                            <Nav.Link as={Link} to="/contact-us">Contact US</Nav.Link>
                         </Nav>
                         <Nav>
                             <Nav.Link href="#deets">Sign In</Nav.Link>

@@ -4,26 +4,38 @@ import './Blog.css'
 const Blog = () => {
     return (
         <div>
-            <h2>Blog</h2>
-            <div className='qa-container'>
-                <div className='qa'>
+            <h2 className='text-center'>Blog</h2>
+            <div className='blog-container'>
+                <div className='blog'>
                     <h3>Difference between authorization and authentication</h3>
-                    <p>React is a Javascript library. When we made a react app, React creates a virtual dom internally by combining all the components and send it to the browser.
-                        The browser renders it and displays it. If the user does something in UI and needs to update the Browser dom, React compares only the changed part with its old virtual dom and updates it significantly faster-using diff algorithm and sends the browser only the changed part for the update. The browser immediately updates it in browser dom and displays it.
+                    <p>authentication is the process of verifying who someone is, whereas authorization is the process of verifying what specific applications, files, and data a user has access to.
                     </p>
                 </div>
-                <div className='qa'>
+                <div className='blog'>
                     <h3>Why are you using firebase? What other options do you have to implement authentication?</h3>
-                    <p>Props is the short form of Property. It is used to transfer data from parent component to its child component.
-                        To pass data from parent to child first have to create a callback function and into child component pass the function as a prop to the child component. In child Component using destructuring data can be used.
-                        The props is unchangeable.  As the data coming from the parent component it can not be changed by child component.
-                    </p>
+                    <div>
+                    Firebase Authentication makes it easier to get your users signed-in without having to understand the complexities behind implementing your own authentication system.
+                    For Developer and Investors it is very easy to use with less modification and extra effort.
+                    <br/>
+                    There are several options to use for authentication.
+                    Such as -
+                    <ol>
+                        <li>Password-based authentication. Passwords are the most common methods of authentication.</li>
+                        <li>Sign in With third party site like facebook, github, twitter etc.</li>
+                    </ol>
+                    </div>
                 </div>
-                <div className='qa'>
+                <div className='blog'>
                     <h3>What other services does firebase provide other than authentication</h3>
-                    <p>
-                        useState is the built in hook in React. useState used to set any state into it. It set an initial value and returns the current value of the state. For the data that frequently update need to use useState.
-                    </p>
+                    <div>
+                        Firebase provide different service other than authentication such as -
+                        <ol>
+                            <li>Hosting Web Site</li>
+                            <li>Hosting Function on the Cloud</li>
+                            <li>Database</li>
+                            <li>Machine Learning and Analysis</li>
+                        </ol>
+                    </div>
                 </div>
             </div>
         </div>

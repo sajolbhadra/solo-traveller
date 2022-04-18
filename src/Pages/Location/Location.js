@@ -5,8 +5,8 @@ const Location = (props) => {
     const {name, price, img, description} = props.location;
     const {handleButton} = props;
     return (
-        <div className='item'>
-            <img src={img} alt="" />
+        <div className='item mx-auto mt-4'>
+            <img src={img} alt="" className='img-fluid'/>
             <div className='item-info'>
                 <h3>Item: {name}</h3>
                 <p>Price: {price}</p>
