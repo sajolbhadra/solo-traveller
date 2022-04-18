@@ -32,6 +32,12 @@ function App() {
           </RequireAuth>
         }>
         </Route>
+        <Route path='/checkout/:id' element={
+          <RequireAuth>
+            <CheckOut></CheckOut>
+          </RequireAuth>
+        }>
+        </Route>
 
         <Route path='*' element={<NotFound></NotFound>}></Route>
       </Routes>

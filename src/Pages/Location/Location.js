@@ -1,9 +1,11 @@
 import React from 'react';
+import { Link, useParams } from 'react-router-dom';
 import './Location.css'
 
 const Location = (props) => {
     const {name, price, img, description} = props.location;
     const {handleButton} = props;
+    const {id} = useParams();
     return (
         <div className='item mx-auto mt-4'>
             <img src={img} alt="" className='img-fluid'/>
@@ -12,9 +14,9 @@ const Location = (props) => {
                 <p>Cost: {price}</p>
                 <p>{description}</p>
             </div>
-                <button onClick={() => handleButton(props.item)} className='btn-cart'>
-                    <span>Select</span> 
-                
+                <button  className='btn-cart'>
+                    {/* <span>Select</span>  */}
+                <Link to={`/checkout/${id}`} className="text-white " >Select Location</Link>
                 </button>
         </div>
     );
